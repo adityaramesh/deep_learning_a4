@@ -22,21 +22,18 @@ cannot be done normally using `wget`, so I could not automate this process.
 due to space constraints, the word-level model is not included in this
 repository.)
 
-
-	cd lstm
-	th a4_communication_loop.lua
+  cd lstm
+  th a4_communication_loop.lua
 
 - The program for character-level prediction is implemented in
 `lstm/a4_char_model_loop.lua`. To run it independently of the grading script,
 type the following commands:
 
-	
-	cd lstm
-	th a4_char_model_loop.lua
+  cd lstm
+  th a4_char_model_loop.lua
 
 - Lastly, the grading script has the path `lstm/a4_grading.py`. To run it, type
 the following commands. Note that the interpreter must support Python 2.
 
-
-	cd lstm
-	python a4_grading.py
+  cd lstm
+  python a4_grading.py
