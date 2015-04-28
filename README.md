@@ -14,7 +14,7 @@ I could not include it in the repository because the file size is over 100 Mb.
 Downloading the file cannot be done normally using `wget`, so I could not
 automate this process.
 
-	https://github.com/adityaramesh/a4/releases/download/model/best_train_model.t7
+	https://github.com/adityaramesh/a4/releases/download/models/best_train_model.t7
 
 # Overview
 
