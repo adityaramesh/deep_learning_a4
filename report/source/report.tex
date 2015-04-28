@@ -1,0 +1,121 @@
+%
+% File Name: report.tex
+% Author:    Aditya Ramesh
+% Date:      04/26/2015
+% Contact:   _@adityaramesh.com
+%
+
+\documentclass[11pt,a4paper]{article}
+
+% Basic math configuration.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{colonequals}
+\usepackage[group-separator={,}]{siunitx}
+
+% Figure management.
+\usepackage{listings}
+\usepackage{subcaption}
+\lstset{basicstyle=\ttfamily}
+
+% URLs and bibliography.
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+
+% NIPS paper configuration.
+\usepackage{source/nips14submit_e}
+\nipsfinalcopy
+
+% Font configuration.
+\usepackage[
+	activate={true,nocompatibility},
+	tracking=true
+]{microtype}
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+
+\title{Assignment 4 Report \\ DS-GA-1008: Deep Learning, Spring 2015}
+\author{Aditya Ramesh \\ \url{_@adityaramesh.com}}
+
+\begin{document}
+\maketitle
+
+\section{Answers to Questions}
+
+\begin{enumerate}
+\item The solution to the problem from the \textsf{nngraph} tutorial is
+implemented in \url{nngraph/nngraph_handin.lua}.
+
+\item \lstinline{i} corresponds to $x_t$, the input to the LSTM unit;
+\lstinline{prev_c} to $c_{t - 1}$, the state of the LSTM cell at time $t - 1$;
+and \lstinline{prev_h} to $h_{t - 1}$, the output of the LSTM cell at time $t -
+1$.
+
+\item \lstinline{create_network} returns the ``rolled'' version of the RNN.
+
+\item \lstinline{model.s} stores the LSTM cell states and outputs of each layer
+of the network, evaluated at each element of each sequence in the current batch.
+\lstinline{model.ds} stores the gradients of the output with respect to the LSTM
+cell states and outputs at time $t + 1$, when performing BBTT at time $t$.
+\lstinline{model.start_s} is used to store the LSTM cell states and outputs
+after processing the last element of the previous sequence. It is reset to zero
+after one pass through the training set.
+
+\item If the norm of the gradient is greater than
+\lstinline{params.max_grad_norm}, the gradient is rescaled to have norm
+\lstinline{params.max_grad_norm}; an alternative is \emph{gradient clipping.}
+
+\item The script uses Stochastic Gradient Update, and the gradients are computed
+using BBTT.
+
+\item With the addition of the extra output node, each call to
+\lstinline{backward} will initiate backpropagation from \emph{both} the
+criterion module and the output node. To nullify the gradient contributions from
+the output node, we supply a matrix of zeros for its output gradients.
+\end{enumerate}
+
+\section{Character-Level Model Description}
+
+I anticipated that the training time would be the main bottleneck during
+experimentation. My focus was to try to improve the time to convergence using a
+variant of the baseline model. To this end, I tried combinations of the
+following strategies:
+\begin{itemize}
+\item Removing unnecessary sources of model complexity.
+\item Increasing the batch size.
+\item Using adaptive optimization algorithms.
+\end{itemize}
+
+One of the main challenges while trying to improve time to convegence was that
+the optimizer would easily diverge. The default weight decay strategy
+implemented in the script works well for small batch sizes of around~20, but
+decreases the learning rate too eagerly when larger batch sizes are used. I
+tried replacing the replacing the default optimization procedure with the
+following:
+\begin{itemize}
+\item AdaDelta with Nesterov Accelerated Gradient~(NAG). The learning rate was
+always set to one, the momentum was chosen to be in the set $\{0.9, 0.95,
+0.99\}$, and the decay constant was chosen to be in the set $\{0.95, 0.99\}$.
+\item RMSProp with NAG. Each time the optimizer diverged, I manually terminated
+the script, decreased the learning rate, and restarted from the version of the
+model with the best training accuracy.
+\end{itemize}
+None of these strategies was effective in accelerating time to convergence. In
+the best case, the optimizer got stuck at around 830 training perplexity, at
+which point it was no longer able to make progress.
+
+In the end, I ended up training two main models using the default optimizater.
+Dropout was not found to be helpful for this task, so it was not used.
+\begin{enumerate}
+\item Batch size 20; sequence length 50; 1 layer; RNN size 200; initial learning
+rate 1; learning rate decayed every 4 epochs.
+\item Batch size 20; sequence length 100; 1 layer; RNN size 400; initial learning
+rate 1; learning rate decayed every 4 epochs.
+\end{enumerate}
+The model with RNN size 400 achieved a validation perplexity of 252.469 after 15
+epochs.
+
+\end{document}

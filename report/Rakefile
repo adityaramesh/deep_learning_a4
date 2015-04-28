@@ -1,0 +1,26 @@
+require 'rake/clean'
+
+report_src_basename = "report"
+report_out_basename = "ar2922"
+src_dir = "source"
+out_dir = "out"
+
+report_src_file = "#{src_dir}/#{report_src_basename}.tex"
+report_out_file = "#{out_dir}/#{report_out_basename}.pdf"
+
+task :default => [out_dir, report_out_file]
+
+directory out_dir
+
+file report_out_file => report_src_file do
+	sh "lualatex --output-directory #{out_dir} #{report_src_file}"
+	#sh "bibtex #{out_dir}/#{report_src_basename}"
+	sh "lualatex --output-directory #{out_dir} #{report_src_file}"
+	sh "lualatex --output-directory #{out_dir} #{report_src_file}"
+	sh "mv #{out_dir}/#{report_src_basename}.pdf #{report_out_file}"
+end
+
+task :clobber => [out_dir] do
+	FileList["#{out_dir}/#{report_src_basename}*"].each{|f| File.delete(f)}
+	FileList["#{out_dir}/#{report_out_basename}*"].each{|f| File.delete(f)}
+end

@@ -1,0 +1,153 @@
+Starting epoch 1.
+Saving current model and training info.32 .....................................]
+ETA: 47s410ms | Step: 213ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 9868.358, wps = 17896, dw:norm() = 3.199, lr =
+1.000, since last restart = 0 mins.
+Saving current model and training info.32 .....................................]
+ETA: 49s783ms | Step: 250ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 9567.638, wps = 15868, dw:norm() = 22.812, lr =
+1.000, since last restart = 0 mins.
+Saving current model and training info.32 .....................................]
+ETA: 45s685ms | Step: 259ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 7840.597, wps = 15353, dw:norm() = 8.743, lr =
+1.000, since last restart = 0 mins.
+Saving current model and training info.32 .....................................]
+ETA: 40s467ms | Step: 264ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 6048.841, wps = 15088, dw:norm() = 4.239, lr =
+1.000, since last restart = 0 mins.
+Saving current model and training info.232 ....................................]
+ETA: 35s374ms | Step: 272ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 4651.899, wps = 14707, dw:norm() = 4.446, lr =
+1.000, since last restart = 0 mins.
+Saving current model and training info.232 ....................................]
+ETA: 29s350ms | Step: 274ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 3580.445, wps = 14685, dw:norm() = 4.582, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.232 =======>............................]
+ETA: 23s173ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 2757.302, wps = 14626, dw:norm() = 4.022, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.232 ==============>.....................]
+ETA: 16s877ms | Step: 276ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 2120.370, wps = 14581, dw:norm() = 4.401, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.232 ======================>.............]
+ETA: 10s382ms | Step: 273ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 1629.106, wps = 14565, dw:norm() = 3.956, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.232 ==============================>.....]
+ETA: 4s110ms | Step: 274ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 1.000, train perp. = 1253.858, wps = 14528, dw:norm() = 3.785, lr =
+1.000, since last restart = 1 mins.
+ [================================ 232/232 ===================================>]
+ETA: 0ms | Step: 277ms
+New best test perplexity: updating hard links.
+Saving accuracy info.
+Validation set perplexity: 647.816
+
+Starting epoch 2.
+Saving current model and training info.2 ......................................]
+ETA: 47s558ms | Step: 212ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 964.585, wps = 14214, dw:norm() = 4.274, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.32 .....................................]
+ETA: 51s989ms | Step: 258ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 755.829, wps = 14252, dw:norm() = 5.093, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.32 .....................................]
+ETA: 47s895ms | Step: 269ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 696.245, wps = 14244, dw:norm() = 5.657, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.32 .....................................]
+ETA: 42s314ms | Step: 272ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 686.810, wps = 14239, dw:norm() = 4.524, lr =
+1.000, since last restart = 1 mins.
+Saving current model and training info.232 ....................................]
+ETA: 36s318ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 676.315, wps = 14235, dw:norm() = 7.717, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.232 ....................................]
+ETA: 30s59ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 663.491, wps = 14244, dw:norm() = 6.567, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.232 ======>.............................]
+ETA: 23s695ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 647.459, wps = 14241, dw:norm() = 5.210, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.232 ==============>.....................]
+ETA: 17s364ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 629.435, wps = 14236, dw:norm() = 5.177, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.232 =====================>..............]
+ETA: 11s23ms | Step: 275ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 609.979, wps = 14244, dw:norm() = 5.786, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.232 =============================>......]
+ETA: 4s692ms | Step: 276ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 2.000, train perp. = 588.805, wps = 14237, dw:norm() = 4.495, lr =
+1.000, since last restart = 2 mins.
+ [================================ 232/232 ===================================>]
+ETA: 0ms | Step: 275ms
+New best test perplexity: updating hard links.
+Saving accuracy info.
+Validation set perplexity: 445.131
+
+Starting epoch 3.
+Saving current model and training info.2 ......................................]
+ETA: 47s920ms | Step: 212ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 3.000, train perp. = 567.419, wps = 14113, dw:norm() = 4.891, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.32 .....................................]
+ETA: 53s215ms | Step: 262ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 3.000, train perp. = 545.881, wps = 14137, dw:norm() = 5.932, lr =
+1.000, since last restart = 2 mins.
+Saving current model and training info.32 .....................................]
+ETA: 49s423ms | Step: 274ms
+New best train perplexity: updating hard links.
+Saving accuracy info.
+epoch = 3.000, train perp. = 525.023, wps = 14122, dw:norm() = 6.897, lr =
+1.000, since last restart = 2 mins.

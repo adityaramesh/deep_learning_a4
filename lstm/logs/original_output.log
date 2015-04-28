@@ -1,0 +1,126 @@
+warning: fbcunn not found. Falling back to cunn
+Using 1-th gpu
+Network parameters:
+{
+  layers : 2
+  lr : 1
+  max_max_epoch : 13
+  max_grad_norm : 5
+  max_epoch : 4
+  init_weight : 0.1
+  decay : 2
+  vocab_size : 10000
+  seq_length : 20
+  batch_size : 20
+  dropout : 0
+  rnn_size : 200
+}
+Creating a RNN LSTM network.
+Starting training.
+epoch = 0.004, train perp. = 9917.097, wps = 5767, dw:norm() = 5.377, lr =
+1.000, since beginning = 0 mins.
+epoch = 0.104, train perp. = 7727.717, wps = 6538, dw:norm() = 2.819, lr =
+1.000, since beginning = 0 mins.
+epoch = 0.204, train perp. = 5715.106, wps = 6561, dw:norm() = 3.413, lr =
+1.000, since beginning = 0 mins.
+epoch = 0.304, train perp. = 4085.445, wps = 6569, dw:norm() = 4.427, lr =
+1.000, since beginning = 1 mins.
+epoch = 0.404, train perp. = 2867.855, wps = 6573, dw:norm() = 4.365, lr =
+1.000, since beginning = 1 mins.
+epoch = 0.504, train perp. = 1992.999, wps = 6575, dw:norm() = 4.724, lr =
+1.000, since beginning = 1 mins.
+epoch = 0.604, train perp. = 1357.883, wps = 6577, dw:norm() = 4.457, lr =
+1.000, since beginning = 1 mins.
+epoch = 0.703, train perp. = 922.632, wps = 6578, dw:norm() = 4.137, lr = 1.000,
+since beginning = 2 mins.
+epoch = 0.803, train perp. = 623.271, wps = 6579, dw:norm() = 4.609, lr = 1.000,
+since beginning = 2 mins.
+epoch = 0.903, train perp. = 415.842, wps = 6579, dw:norm() = 4.467, lr = 1.000,
+since beginning = 2 mins.
+Validation set perplexity : 181.129
+epoch = 1.003, train perp. = 277.683, wps = 6414, dw:norm() = 4.341, lr = 1.000,
+since beginning = 2 mins.
+epoch = 1.103, train perp. = 234.512, wps = 6427, dw:norm() = 4.193, lr = 1.000,
+since beginning = 3 mins.
+epoch = 1.203, train perp. = 211.517, wps = 6440, dw:norm() = 4.379, lr = 1.000,
+since beginning = 3 mins.
+epoch = 1.303, train perp. = 194.526, wps = 6451, dw:norm() = 4.746, lr = 1.000,
+since beginning = 3 mins.
+epoch = 1.402, train perp. = 181.882, wps = 6461, dw:norm() = 4.483, lr = 1.000,
+since beginning = 3 mins.
+epoch = 1.502, train perp. = 171.472, wps = 6470, dw:norm() = 4.627, lr = 1.000,
+since beginning = 4 mins.
+epoch = 1.602, train perp. = 162.691, wps = 6478, dw:norm() = 4.776, lr = 1.000,
+since beginning = 4 mins.
+epoch = 1.702, train perp. = 155.739, wps = 6485, dw:norm() = 4.862, lr = 1.000,
+since beginning = 4 mins.
+epoch = 1.802, train perp. = 149.587, wps = 6491, dw:norm() = 4.806, lr = 1.000,
+since beginning = 4 mins.
+epoch = 1.902, train perp. = 143.440, wps = 6497, dw:norm() = 4.876, lr = 1.000,
+since beginning = 5 mins.
+Validation set perplexity : 143.776
+epoch = 2.002, train perp. = 138.407, wps = 6420, dw:norm() = 4.667, lr = 1.000,
+since beginning = 5 mins.
+epoch = 2.102, train perp. = 133.581, wps = 6428, dw:norm() = 4.835, lr = 1.000,
+since beginning = 5 mins.
+epoch = 2.201, train perp. = 129.756, wps = 6436, dw:norm() = 4.722, lr = 1.000,
+since beginning = 5 mins.
+epoch = 2.301, train perp. = 125.908, wps = 6443, dw:norm() = 4.886, lr = 1.000,
+since beginning = 6 mins.
+epoch = 2.401, train perp. = 122.449, wps = 6448, dw:norm() = 5.002, lr = 1.000,
+since beginning = 6 mins.
+epoch = 2.501, train perp. = 119.305, wps = 6454, dw:norm() = 5.297, lr = 1.000,
+since beginning = 6 mins.
+epoch = 2.601, train perp. = 116.393, wps = 6459, dw:norm() = 5.579, lr = 1.000,
+since beginning = 6 mins.
+epoch = 2.701, train perp. = 113.808, wps = 6464, dw:norm() = 4.949, lr = 1.000,
+since beginning = 6 mins.
+epoch = 2.801, train perp. = 111.362, wps = 6468, dw:norm() = 5.225, lr = 1.000,
+since beginning = 7 mins.
+epoch = 2.901, train perp. = 108.905, wps = 6473, dw:norm() = 5.598, lr = 1.000,
+since beginning = 7 mins.
+Validation set perplexity : 133.373
+epoch = 3.000, train perp. = 106.702, wps = 6423, dw:norm() = 5.231, lr = 1.000,
+since beginning = 7 mins.
+epoch = 3.100, train perp. = 104.479, wps = 6428, dw:norm() = 5.208, lr = 1.000,
+since beginning = 7 mins.
+epoch = 3.200, train perp. = 102.551, wps = 6433, dw:norm() = 5.366, lr = 1.000,
+since beginning = 8 mins.
+epoch = 3.300, train perp. = 100.646, wps = 6438, dw:norm() = 5.232, lr = 1.000,
+since beginning = 8 mins.
+epoch = 3.400, train perp. = 98.844, wps = 6443, dw:norm() = 5.171, lr = 1.000,
+since beginning = 8 mins.
+epoch = 3.500, train perp. = 97.130, wps = 6447, dw:norm() = 5.320, lr = 1.000,
+since beginning = 8 mins.
+epoch = 3.600, train perp. = 95.521, wps = 6451, dw:norm() = 5.753, lr = 1.000,
+since beginning = 9 mins.
+epoch = 3.700, train perp. = 93.963, wps = 6455, dw:norm() = 5.380, lr = 1.000,
+since beginning = 9 mins.
+epoch = 3.799, train perp. = 92.536, wps = 6459, dw:norm() = 5.824, lr = 1.000,
+since beginning = 9 mins.
+epoch = 3.899, train perp. = 91.110, wps = 6463, dw:norm() = 5.603, lr = 1.000,
+since beginning = 9 mins.
+epoch = 3.999, train perp. = 89.807, wps = 6467, dw:norm() = 5.451, lr = 1.000,
+since beginning = 10 mins.
+Validation set perplexity : 127.655
+epoch = 4.099, train perp. = 88.528, wps = 6431, dw:norm() = 5.996, lr = 1.000,
+since beginning = 10 mins.
+epoch = 4.199, train perp. = 87.344, wps = 6435, dw:norm() = 6.197, lr = 1.000,
+since beginning = 10 mins.
+epoch = 4.299, train perp. = 86.144, wps = 6439, dw:norm() = 5.681, lr = 1.000,
+since beginning = 10 mins.
+epoch = 4.399, train perp. = 85.032, wps = 6443, dw:norm() = 5.727, lr = 1.000,
+since beginning = 11 mins.
+epoch = 4.498, train perp. = 83.938, wps = 6447, dw:norm() = 6.171, lr = 1.000,
+since beginning = 11 mins.
+epoch = 4.598, train perp. = 82.917, wps = 6451, dw:norm() = 5.394, lr = 1.000,
+since beginning = 11 mins.
+epoch = 4.698, train perp. = 81.917, wps = 6454, dw:norm() = 6.240, lr = 1.000,
+since beginning = 11 mins.
+epoch = 4.798, train perp. = 80.979, wps = 6458, dw:norm() = 6.330, lr = 1.000,
+since beginning = 12 mins.
+epoch = 4.898, train perp. = 80.082, wps = 6461, dw:norm() = 6.441, lr = 1.000,
+since beginning = 12 mins.
+epoch = 4.998, train perp. = 79.207, wps = 6464, dw:norm() = 5.870, lr = 1.000,
+since beginning = 12 mins.
+Validation set perplexity : 126.030
