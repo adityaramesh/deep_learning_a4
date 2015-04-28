@@ -68,8 +68,8 @@ after one pass through the training set.
 \lstinline{params.max_grad_norm}, the gradient is rescaled to have norm
 \lstinline{params.max_grad_norm}; an alternative is \emph{gradient clipping.}
 
-\item The script uses Stochastic Gradient Update, and the gradients are computed
-using BBTT.
+\item The script uses Stochastic Gradient Update~(SGU), and the gradients are
+computed using BBTT.
 
 \item With the addition of the extra output node, each call to
 \lstinline{backward} will initiate backpropagation from \emph{both} the
@@ -89,7 +89,7 @@ following strategies:
 \item Using adaptive optimization algorithms.
 \end{itemize}
 
-One of the main challenges while trying to improve time to convegence was that
+One of the main challenges while trying to improve time to convergence was that
 the optimizer would easily diverge. The default weight decay strategy
 implemented in the script works well for small batch sizes of around~20, but
 decreases the learning rate too eagerly when larger batch sizes are used. I
@@ -103,19 +103,48 @@ always set to one, the momentum was chosen to be in the set $\{0.9, 0.95,
 the script, decreased the learning rate, and restarted from the version of the
 model with the best training accuracy.
 \end{itemize}
-None of these strategies was effective in accelerating time to convergence. In
-the best case, the optimizer got stuck at around 830 training perplexity, at
-which point it was no longer able to make progress.
+None of these strategies was effective in accelerating time to convergence when
+compared to SGU for the batch sizes~50, 100, and~200. In the best case, the
+optimizer got stuck at around 830 training perplexity, at which point it was no
+longer able to make progress.
 
-In the end, I ended up training two main models using the default optimizater.
-Dropout was not found to be helpful for this task, so it was not used.
+Graves~(2013) achieves a perplexity of~122 on the Penn Treebank Test Set using a
+character-level LSTM RNN with only one layer. This suggests that increasing the
+complexity of the model while keeping the sequence size constant is probably not
+the best use of time and computing resources. One reason for this may be that
+the data set is relatively small, so models are prone to overfitting. Following
+this reasoning, I trained two models using the default optimizer. Dropout was
+not found to be helpful for this task.
 \begin{enumerate}
-\item Batch size 20; sequence length 50; 1 layer; RNN size 200; initial learning
-rate 1; learning rate decayed every 4 epochs.
-\item Batch size 20; sequence length 100; 1 layer; RNN size 400; initial learning
-rate 1; learning rate decayed every 4 epochs.
+\item Batch size~20; sequence length~50; one layer; LSTM cell size~200; initial
+learning rate~1; learning rate decayed every~4 epochs.
+\item Batch size~20; sequence length~100; one layer; LSTM cell size~400; initial
+learning rate~1; learning rate decayed every~4 epochs.
 \end{enumerate}
-The model with RNN size 400 achieved a validation perplexity of 252.469 after 15
-epochs.
+Model~2 achieved a validation perplexity of~252.469 after 15~epochs, while
+Model~1 achieved a validation perplexity of~492.017 after 14~epochs.
+
+\section{Future Ideas}
+
+Given the success of the model reported in Graves~(2013), I thought of possible
+reasons for why the performance of the baseline is so poor in comparison. There
+are three notable differences between Graves' implementation and that of
+Zaremba:
+\begin{enumerate}
+\item Graves uses ``peephole'' connections from the LSTM cell to the gates.
+\item Graves incorporates skip connections from the input to the LSTM units for
+several of the models described in his thesis. Graves' model for the Penn
+Treebank Test Set consists of only one LSTM layer, so this may not be relevant.
+\item Graves uses gradient clipping instead of gradient scaling.
+\end{enumerate}
+Item~1 in particular may allow the network to make better use of its memory from
+previous timesteps.
+
+The current implementation does not shuffle the sentences after each epoch, and
+the contextual memory of the network is only cleared after one pass through the
+entire training set. I think that it would make more sense to shuffle the
+sentences after each epoch, and clear the network's memory after processing each
+sentence. This scheme would complicate data processing, but is something that I
+think is worth trying in the future.
 
 \end{document}
