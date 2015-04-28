@@ -5,15 +5,18 @@
   ** Contact:   _@adityaramesh.com
 -->
 
-# Overview
 
-**Important note:** You will need to download the character-level model file
-from the following URL, and save it to the path
-`lstm/models/queryable_char_model/best_train_model.t7`. I could not include it
-in the repository because the file size is over 100 Mb. Downloading the file
-cannot be done normally using `wget`, so I could not automate this process.
+# Important Note
+
+You will need to download the character-level model file from the following URL,
+and save it to the path `lstm/models/queryable_char_model/best_train_model.t7`.
+I could not include it in the repository because the file size is over 100 Mb.
+Downloading the file cannot be done normally using `wget`, so I could not
+automate this process.
 
 	https://github.com/adityaramesh/a4/releases/download/model/best_train_model.t7
+
+# Overview
 
 - The solution for Q1 is implemented in `nngraph/nngraph_handin.lua`.
 - The report file has the path `report/out/ar2922.pdf`.
