@@ -20,11 +20,11 @@ automate this process.
 - The solution for Q1 is implemented in `nngraph/nngraph_handin.lua`.
 - The report file has the path `report/out/ar2922.pdf`.
 - The program for sequence generation is implemented in
-`lstm/a4_communication_loop.lua`. To run it, type `th
+`a4_communication_loop.lua`. To run it, type `th
 a4_communication_loop.lua`. (Note: due to space constraints, the word-level
 model is not included in this repository.)
 - The program for character-level prediction is implemented in
-`lstm/a4_char_model_loop.lua`. To run it independently of the grading script,
+`a4_char_model_loop.lua`. To run it independently of the grading script,
 type `th a4_char_model_loop.lua`.
-- Lastly, the grading script has the path `lstm/a4_grading.py`. To run it, type
+- Lastly, the grading script has the path `a4_grading.py`. To run it, type
 the `python a4_grading.py`. Note that the interpreter must support Python 2.
