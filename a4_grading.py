@@ -28,7 +28,6 @@ print "Flushing proc output until OK GO received"
 while True:
     ret = proc.stdout.readline()
     print " -- ", ret.strip()
-    print(ret.strip() == "OK GO")
     if ret.strip() == "OK GO":
         break
 
