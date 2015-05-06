@@ -1,0 +1,32 @@
+# General comments and issues with running your submission
+Wrong git clone command.
+Using subdir instead of top level.
+
+# Your test set score
+442000	Perplexity: 216.872503	avgnll: 0.960591	fails: 0
+
+# Your answer to the questions (no comment means correct)
++ Q1
++ Q2
++ Q3
++ Q4
++ Q5
++ Q6
++ Q7
+
+# Comments on your code
+Good implementation of dummy_output_grads.
+Clean prediction code.
+Not necessary to keep batch_size tensor as input around.
+
+# Comments on your write-up
+Very good effort in trying new things and reading the papers.
+Clearing context per sentence doesn't make sense to me, but clearing context per document does.
+
+# Grading
++ Test set performance (out of 25): 25
++ Questions            (out of 25): 25
++ Code                 (out of 25): 25
++ Write-up and effort  (out of 25): 25
++ Lateness deduction              : 
++ TOTAL (out of 100):             : 100
