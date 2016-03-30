@@ -1,0 +1,12 @@
+Generated char level test data? (would be a grave error)
+
+cd ar2922; git log --pretty=format:"%an, %ad : %s" -4
+Aditya Ramesh, Wed Apr 29 20:12:53 2015 -0400 : Edited old paths.
+Aditya Ramesh, Wed Apr 29 20:09:52 2015 -0400 : Moved LSTM code to base directory.
+Aditya Ramesh, Mon Apr 27 21:01:07 2015 -0400 : Fixed formatting and added future section.
+Aditya Ramesh, Mon Apr 27 20:28:04 2015 -0400 : Updated link to release.
+
+cd ar2922; git log --pretty=format:"%ad" -1
+Wed Apr 29 20:12:53 2015 -0400
+
+Last commit is too late by 2 days, 0:27:53
